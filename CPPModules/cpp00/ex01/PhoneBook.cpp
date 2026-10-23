@@ -19,7 +19,6 @@ PhoneBook::PhoneBook(void)
 {
 	std::cout << "Hello! Welcome to PhoneBook42!" << std::endl;
 	std::cout << std::endl << "What do you want to do? ";
-	std::cout << "Writing multiple words will only retrieve the first!";
 	std::cout << std::endl << "[ADD] [SEARCH] [EXIT]" << std::endl;
 
 	//some more init
@@ -28,6 +27,11 @@ PhoneBook::PhoneBook(void)
 PhoneBook::~PhoneBook(void)
 {
 	std::cout << "Exiting PhoneBook42. See you again soon~" << std::endl;
+}
+
+int	PhoneBook::getInput(std::string input)
+{
+
 }
 
 // Contact	PhoneBook::AddContact()
@@ -42,15 +46,21 @@ PhoneBook::~PhoneBook(void)
 
 int	main()
 {
-	std::string x;
+	std::string input;
+	std::string	inputUpper;
 	PhoneBook phbook;
 	
-	while (1)
+	while (std::getline(std::cin, input))
 	{
-		std::cin >> x;
+		inputUpper = input;
+		for(int i = 0; inputUpper[i]; i++)
+			inputUpper[i] = static_cast<char>(std::toupper(inputUpper[i]));
 
-		if (x == "exit")
+		if (inputUpper == "ADD")
+			;
+		if (inputUpper == "SEARCH")	
+			;
+		if (inputUpper == "EXIT")
 			break ;
-		std::cout << x << std::endl;
 	}
 }

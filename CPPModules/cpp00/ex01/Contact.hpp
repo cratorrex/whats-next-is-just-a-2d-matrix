@@ -20,11 +20,11 @@
 class	Contact
 {
 	private:
-		// std::string		firstName;
-		// std::string		lastName;
-		// std::string		nickName;
-		// int				phoneNumber;
-		// std::string		darkestNecret;
+		std::string		firstName;
+		std::string		lastName;
+		std::string		nickName;
+		int				phoneNumber;
+		std::string		darkestNecret;
 
 	public:
 		Contact();

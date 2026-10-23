@@ -24,11 +24,14 @@
 class	PhoneBook
 {
 	private:
-		Contact	contact;
-
+		Contact	contact[8];
+		
 	public:
+		Contact	temp;
+
 		PhoneBook();
 		~PhoneBook();
+		int	getInput(std::string);
 		//Contact	AddContact();
 		//Contact	PopContact();
 };

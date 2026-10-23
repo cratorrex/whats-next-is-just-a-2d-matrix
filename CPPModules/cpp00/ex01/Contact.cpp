@@ -14,7 +14,7 @@
 
 Contact::Contact()
 {
-	std::cout << "init contact" << std::endl;
+
 }
 
 Contact::~Contact()
