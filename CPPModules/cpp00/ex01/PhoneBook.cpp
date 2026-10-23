@@ -18,20 +18,39 @@
 PhoneBook::PhoneBook(void)
 {
 	std::cout << "Hello! Welcome to PhoneBook42!" << std::endl;
-	std::cout << std::endl << "What do you want to do? ";
-	std::cout << std::endl << "[ADD] [SEARCH] [EXIT]" << std::endl;
 
 	//some more init
+}
+
+int	PhoneBook::Prompt()
+{
+	std::string input;
+	std::string	inputUpper;
+	
+	std::cout << std::endl << "What do you want to do? ";
+	std::cout << std::endl << "[ADD] [SEARCH] [EXIT]" << std::endl;
+	
+	while (std::getline(std::cin, input))
+	{
+		inputUpper = input;
+		for(int i = 0; inputUpper[i]; i++)
+			inputUpper[i] = static_cast<char>(std::toupper(inputUpper[i]));
+
+		if (inputUpper == "ADD")
+			;
+		if (inputUpper == "SEARCH")	
+			;
+		if (inputUpper == "EXIT")
+			break ;
+	std::cout << std::endl << "What do you want to do? ";
+	std::cout << std::endl << "[ADD] [SEARCH] [EXIT]" << std::endl;
+	}
+	return 0;
 }
 
 PhoneBook::~PhoneBook(void)
 {
 	std::cout << "Exiting PhoneBook42. See you again soon~" << std::endl;
-}
-
-int	PhoneBook::getInput(std::string input)
-{
-
 }
 
 // Contact	PhoneBook::AddContact()
@@ -46,21 +65,6 @@ int	PhoneBook::getInput(std::string input)
 
 int	main()
 {
-	std::string input;
-	std::string	inputUpper;
 	PhoneBook phbook;
-	
-	while (std::getline(std::cin, input))
-	{
-		inputUpper = input;
-		for(int i = 0; inputUpper[i]; i++)
-			inputUpper[i] = static_cast<char>(std::toupper(inputUpper[i]));
-
-		if (inputUpper == "ADD")
-			;
-		if (inputUpper == "SEARCH")	
-			;
-		if (inputUpper == "EXIT")
-			break ;
-	}
+	phbook.Prompt();
 }

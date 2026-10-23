@@ -14,6 +14,7 @@
 # define PHONEBOOK_HPP
 
 # include <iostream>
+# include <iomanip>
 # include <string>
 # include "Contact.hpp"
 
@@ -31,7 +32,7 @@ class	PhoneBook
 
 		PhoneBook();
 		~PhoneBook();
-		int	getInput(std::string);
+		int	Prompt();
 		//Contact	AddContact();
 		//Contact	PopContact();
 };
