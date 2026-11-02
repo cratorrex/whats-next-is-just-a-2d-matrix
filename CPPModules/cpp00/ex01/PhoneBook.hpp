@@ -27,14 +27,13 @@ class	PhoneBook
 	private:
 		Contact	contact[8];
 		
-	public:
-		Contact	temp;
-
+	public:	
 		PhoneBook();
 		~PhoneBook();
-		int	Prompt();
-		//Contact	AddContact();
-		//Contact	PopContact();
+		int 	ContactsAdded;
+		int		Prompt();
+		void	Hello(int i);
+		void	ListContacts(); //not to confuse:  Contact::ListContact
 };
 
 #endif

@@ -20,15 +20,20 @@
 class	Contact
 {
 	private:
-		// std::string		firstName;
-		// std::string		lastName;
-		// std::string		nickName;
-		// int				phoneNumber;
-		// std::string		darkestNecret;
-
+		std::string		firstName;
+		std::string		lastName;
+		std::string		nickName;
+		std::string		phoneNumber;
+		std::string		darkestSecret;
+		int				CheckFields();
+	
 	public:
+		int		sn;
 		Contact();
 		~Contact();
+		int		AddContact(int idx);
+		void	ListContact();
+		void	DisplayContact();
 };
 
 # endif
