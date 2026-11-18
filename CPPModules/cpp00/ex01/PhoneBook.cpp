@@ -23,7 +23,6 @@ PhoneBook::PhoneBook(void)
 
 int	PhoneBook::Prompt()
 {
-	int			counter = 0;
 	std::string input;
 	std::string	inputUpper;
 	
